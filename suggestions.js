@@ -12,7 +12,7 @@ document.getElementById('suggestionForm').addEventListener('submit', async funct
     }
 
     // Sending suggestion to Discord webhook
-    const webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL';
+    const webhookUrl = 'https://discord.com/api/webhooks/1296221578777985115/4Sdl7190jmV7QI7vR6ogXQI2grBy0yoOHWv_4Hv4btD7lEX8NyWeGPIUiPBt7mteTsVo';
     fetch(webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -38,7 +38,7 @@ async function getUserIp() {
 }
 
 async function isBanned(ip) {
-    const response = await fetch('https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME/main/banned-ips.json');
+    const response = await fetch('https://raw.githubusercontent.com/ysmuu/pangea/main/banned-ips.json');
     const bannedIps = await response.json();
     return bannedIps.includes(ip);
 }
